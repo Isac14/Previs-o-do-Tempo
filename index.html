@@ -6,6 +6,15 @@
         <title>Previsão do Tempo</title>
         <link rel="stylesheet" href="./style.css" />
         <script src="./script.js" defer></script>
+
+        <!-- Google API -->
+        <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs4vLRfwzPXjRSci2OT-b5JwahYXd-mas&libraries=places&callback=initMap"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Icons -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -14,10 +23,10 @@
             referrerpolicy="no-referrer"
         />
     </head>
+
     <body>
         <div class="container">
             <!-- formulário -->
-
             <div class="form">
                 <h3>Confira o clima de uma cidade:</h3>
                 <div class="form-input-container">

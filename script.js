@@ -17,7 +17,7 @@ const weatherContainer = document.querySelector("#weather-data");
 
 // Funções
 
-// acessa os dados da API
+// -acessa os dados da API
 const getWeatherData = async (city) => {
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
 
@@ -59,11 +59,29 @@ searchBtn.addEventListener("click", (e) => {
     showWatherData(city);
 });
 
-// habilitando a tecla enter
+// -configurando a tecla enter
 cityInput.addEventListener("keyup", (e) => {
     if (e.code === "Enter") {
         const city = e.target.value;
 
         showWatherData(city);
     }
+});
+
+// -autocomplete - Google Maps API
+$(document).ready(function () {
+    var autocomplete;
+    autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById("city-input"),
+        {
+            types: ["geocode"],
+            // componentRestrictions: {
+            //     country: "BR",
+            // },
+        }
+    );
+
+    google.maps.event.addListener(autocomplete, "place_changed", function () {
+        var near_place = autocomplete.getPlace();
+    });
 });

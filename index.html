@@ -9,10 +9,22 @@
 
         <!-- Google API -->
         <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFZaVH8RdiaWRte5Li3Vt7KDz5ddTI6Do&libraries=places&callback=initAutocomplete"
             async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs4vLRfwzPXjRSci2OT-b5JwahYXd-mas&libraries=places&callback=initMap"
+            defer
         ></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script>
+            let autocomplete;
+            function initAutocomplete() {
+                autocomplete = new google.maps.places.Autocomplete(
+                    document.getElementById("city-input"),
+                    {
+                        types: ["geocode"],
+                    }
+                );
+            }
+        </script>
 
         <!-- Icons -->
         <link

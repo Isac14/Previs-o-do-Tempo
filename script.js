@@ -67,21 +67,3 @@ cityInput.addEventListener("keyup", (e) => {
         showWatherData(city);
     }
 });
-
-// -autocomplete - Google Maps API
-$(document).ready(function () {
-    var autocomplete;
-    autocomplete = new google.maps.places.Autocomplete(
-        document.getElementById("city-input"),
-        {
-            types: ["geocode"],
-            // componentRestrictions: {
-            //     country: "BR",
-            // },
-        }
-    );
-
-    google.maps.event.addListener(autocomplete, "place_changed", function () {
-        var near_place = autocomplete.getPlace();
-    });
-});

@@ -12,6 +12,7 @@ const descElement = document.querySelector("#description");
 const weatherIconElement = document.querySelector("#weather-icon");
 const humidityElement = document.querySelector("#umidity span");
 const windElement = document.querySelector("#wind span");
+const sensationElement = document.querySelector("#sensation span");
 
 const weatherContainer = document.querySelector("#weather-data");
 
@@ -46,6 +47,9 @@ const showWatherData = async (city) => {
     );
     humidityElement.innerHTML = `${data.main.humidity}%`;
     windElement.innerHTML = `${parseInt(data.wind.speed)} km/h`;
+    sensationElement.innerHTML = `Sensação Térmica: ${parseInt(
+        data.main.feels_like
+    )}°C`;
 
     weatherContainer.classList.remove("hide");
 };

@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(180deg, #594cee 0%, #8dd0f5 100%);
+    background-color: powderblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,10 +19,9 @@ body {
 }
 
 .container {
-    background-color: #5c54ed;
+    background-color: rgb(140, 202, 210);
     box-shadow: black 0px 0px 9px;
     padding: 2rem;
-    color: #fdfdfd;
     border-radius: 1rem;
     user-select: none;
 }
@@ -48,17 +47,22 @@ body {
     padding: 0.8rem;
     min-width: 50px;
     margin-left: 8px;
-    background-color: #8dd0f5;
-    color: #fff;
+    background-color: powderblue;
+    /* color: #fff; */
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 /* weather */
 
+#temperature {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
 #weather-data {
-    border-top: 1px solid #fff;
+    border-top: 1px solid;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
     text-align: center;
@@ -90,9 +94,10 @@ body {
 
 #description-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0.6rem 0;
+    margin: 2rem 0 0 0;
 }
 
 #details-container {
@@ -102,7 +107,7 @@ body {
 }
 
 #details-container #umidity {
-    border-right: 1px solid #fff;
+    border-right: 1px solid;
     margin: 0.9rem;
     padding: 0.6rem;
 }

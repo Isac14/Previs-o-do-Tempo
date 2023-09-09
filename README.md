@@ -1,6 +1,6 @@
 # Previsão do Tempo
 
-# Sobre o Projeto
+## Sobre o Projeto
 
 https://isac14.github.io/Previsao-do-Tempo/
 
